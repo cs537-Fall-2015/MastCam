@@ -9,7 +9,7 @@ import module1.ModuleOneServer;
 import module2.ModuleTwoClient;
 import module2.ModuleTwoServer;
 
-public class MasterMainERROR {
+public class MasterMain {
 
 	public static void main(String[] args) {
 		
