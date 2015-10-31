@@ -15,6 +15,7 @@ public class test {
 			Server server = new Server((int)Ports.MASTCAM_PORT);
 			Thread serverThread = RoverThreadHandler.getRoverThreadHandler().getNewThread(server);
 			serverThread.start();
+			System.out.print("Server code");
 			
 		} 
 		catch (IOException e) {
