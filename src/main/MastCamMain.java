@@ -1,14 +1,13 @@
-package MastcamModule.testmainMastCam;
-
-import generic.RoverThreadHandler;
+package main;
 
 import java.io.IOException;
 
+import MastcamModule.Client;
 import MastcamModule.Ports;
 import MastcamModule.Server;
+import generic.RoverThreadHandler;
 
-public class MastCam_testmain {
-
+public class MastCamMain {
 	public static void main(String[] args) {
 		try {
 			// create a thread for module one
@@ -23,5 +22,4 @@ public class MastCam_testmain {
 		}
 
 	}
-
 }
