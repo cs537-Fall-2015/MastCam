@@ -4,7 +4,6 @@ import generic.RoverThreadHandler;
 
 import java.io.IOException;
 
-import mastCam.Client;
 import mastCam.Ports;
 import mastCam.Server;
 

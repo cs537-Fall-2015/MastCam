@@ -1,4 +1,4 @@
-package mastCam;
+package mastCam.mastCam_testMain;
 
 import generic.RoverClientRunnable;
 
