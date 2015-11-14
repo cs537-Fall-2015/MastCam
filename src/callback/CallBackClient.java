@@ -20,7 +20,7 @@ public class CallBackClient extends RoverClientRunnable{
 		    
             //write to socket using ObjectOutputStream
             outputToAnotherObject = new ObjectOutputStream(getRoverSocket().getNewSocket().getOutputStream());
-            
+            System.out.println("----------");
             System.out.println("Call Back 1 Client: Sending request to Control Server");
 
             outputToAnotherObject.writeObject("CCDS_DONE");
