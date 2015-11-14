@@ -1,5 +1,8 @@
 package mastCam;
 
+import mastCam.hardware.Camera;
+import mastCam.hardware.CameraTypes;
+
 public class Controller {
 	private Camera mastCam34;
 	private Camera mastCam100;
