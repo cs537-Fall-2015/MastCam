@@ -10,7 +10,8 @@ import mastCam.Server;
 public class TestMain {
 	public static void main(String[] args) {
 		try {
-			// create a thread for module one
+	
+			
 			Server server = new Server((int) Ports.MASTCAM_PORT);
 			Thread serverThread = RoverThreadHandler.getRoverThreadHandler()
 					.getNewThread(server);
@@ -22,7 +23,7 @@ public class TestMain {
 			clientThread.start();
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 

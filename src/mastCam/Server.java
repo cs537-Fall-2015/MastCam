@@ -92,6 +92,7 @@ Controller cameraController;
 					//savePrintAndCallBack();
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_CAPTR_VID.toString())){
+					Thread.sleep(3000);
 					System.out.println("MastCam captured video");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.captureVideo();
@@ -103,6 +104,8 @@ Controller cameraController;
 					//savePrintAndCallBack();
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_RTN_THBMNL.toString())){
+					System.out.println("MastCam creating thumbnail");
+					Thread.sleep(1000);
 					System.out.println("MastCam returned thumbnail");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.returnPhoto("thumbnail");
@@ -114,6 +117,9 @@ Controller cameraController;
 				//	savePrintAndCallBack();
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_RTN_CMPRSD.toString())){
+					System.out.println("MastCam creating compressed image");
+					
+					Thread.sleep(1000);
 					System.out.println("MastCam returned compressed image");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.returnPhoto("compressed");
