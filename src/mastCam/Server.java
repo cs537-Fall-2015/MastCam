@@ -80,6 +80,7 @@ Controller cameraController;
 					//savePrintAndCallBack();					
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_CAPTR_PANRMA.toString())){
+					Thread.sleep(1000);
 					System.out.println("MastCam captured panorama");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.capturePhoto("panorama");
