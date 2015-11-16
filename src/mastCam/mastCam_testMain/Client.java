@@ -116,7 +116,7 @@ public class Client extends RoverClientRunnable {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
 	        } catch (Exception error) {
-	            System.out.println("Client: Error:" + error.getMessage());
+	          //  System.out.println("Client: Error:" + error.getMessage());
 	        }
 	    }
 }

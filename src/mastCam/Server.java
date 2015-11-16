@@ -187,6 +187,11 @@ Controller cameraController;
 					}
 					
 				//	savePrintAndCallBack();
+				}else if(message.equalsIgnoreCase("EXIT")){
+					break;
+				}
+				else{
+					System.out.println("Invalid Command");
 				}
 				
 				// write object to Socket
@@ -197,8 +202,8 @@ Controller cameraController;
 				inputFromAnotherObject.close();
 				outputToAnotherObject.close();
 				
-				if (message.equalsIgnoreCase("exit"))
-					break;
+				/*if (message.equalsIgnoreCase("exit"))
+					break;*/
 				
 			}
 			System.out.println("Server: Shutting down Socket server 1!!");
