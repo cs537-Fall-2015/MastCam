@@ -206,7 +206,7 @@ Controller cameraController;
 					break;*/
 				
 			}
-			System.out.println("Server: Shutting down Socket server 1!!");
+			System.out.println("Server: Shutting down Socket server!!");
 			// close the ServerSocket object
 			closeAll();
 		} catch (IOException e) {
@@ -222,7 +222,7 @@ Controller cameraController;
 	private void savePrintAndCallBack(){
 		@SuppressWarnings("unused")
 		//MyWriter JSONWriter = new MyWriter(cameraController, 6);
-		//MyWriter JSONWriter = new MyWriter(cameraController.currentMastCam, 6);
+		MyWriter JSONWriter = new MyWriter(cameraController.currentMastCam, 6);
 		
 		// Gson is used to create a json object that is spaced nicely
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();

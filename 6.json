@@ -1,0 +1,11 @@
+{
+  "type": "MastCam100",
+  "focalLength": "100 mm",
+  "lens": "f/10",
+  "fov": "5.1 degrees",
+  "resolution": "1200 x 1200",
+  "currentFilter": 1,
+  "numberOfFilters": 8,
+  "photoCount": 0,
+  "on": true
+}
