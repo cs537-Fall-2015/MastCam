@@ -1,4 +1,4 @@
-Compiling and Running the MastCam
+Compiling and Running the MastCam:
 
 1) Download / Clone this project in Eclipse.
 
