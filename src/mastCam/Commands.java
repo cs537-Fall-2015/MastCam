@@ -68,10 +68,16 @@ public enum Commands {
 			return "MCAM_SLCT_FLTR";
 		}
 	},
-	// Select either MastCam-100 or MastCam-34
-	MCAM_SLCT_CAM{
+	// Select MastCam-100
+	MCAM_SLCT_CAM_100{
 		public String toString(){
-			return "MCAM_SLCT_CAM";
+			return "MCAM_SLCT_CAM_100";
+		}
+	},
+	//Select MastCam-34
+	MCAM_SLCT_CAM_34{
+		public String toString(){
+			return "MCAM_SLCT_CAM_34";
 		}
 	},
 	// Clears the memory buffer
