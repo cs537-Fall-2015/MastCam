@@ -39,6 +39,7 @@ Controller cameraController;
 				
 				// convert ObjectInputStream object to String
 				String message = (String) inputFromAnotherObject.readObject();
+				Thread.sleep(1000);
 				System.out.println("MastCam Server: Message Received from Client - "+ message.toUpperCase());
 				
 				// create ObjectOutputStream object
@@ -50,6 +51,7 @@ Controller cameraController;
 				// terminate the server if client sends exit request
 				if(message.equalsIgnoreCase(Commands.MCAM_PWR_ON.toString())){
 					// Call Power: request power
+					Thread.sleep(1000);
 					System.out.println("MastCam powered on");
 					cameraController.currentMastCam.setOn(true);
 					//savePrintAndCallBack();
@@ -59,6 +61,7 @@ Controller cameraController;
 					mastCamClientThread.start();
 */				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_PWR_OFF.toString())){
+					Thread.sleep(1000);
 					// Call Power: turn off
 					System.out.println("MastCam powered off");
 					cameraController.currentMastCam.setOn(false);
@@ -69,6 +72,7 @@ Controller cameraController;
 					mastCamClientThread.start();
 */				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_CAPTR_STILL.toString())){
+					Thread.sleep(3000);
 					System.out.println("MastCam captured still image");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.capturePhoto("still");
@@ -80,7 +84,7 @@ Controller cameraController;
 					//savePrintAndCallBack();					
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_CAPTR_PANRMA.toString())){
-					Thread.sleep(1000);
+					Thread.sleep(3000);
 					System.out.println("MastCam captured panorama");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.capturePhoto("panorama");
@@ -105,7 +109,7 @@ Controller cameraController;
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_RTN_THBMNL.toString())){
 					System.out.println("MastCam creating thumbnail");
-					Thread.sleep(1000);
+					Thread.sleep(3000);
 					System.out.println("MastCam returned thumbnail");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.returnPhoto("thumbnail");
@@ -117,6 +121,7 @@ Controller cameraController;
 				//	savePrintAndCallBack();
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_RTN_CMPRSD.toString())){
+					Thread.sleep(3000);
 					System.out.println("MastCam creating compressed image");
 					
 					Thread.sleep(1000);
@@ -131,6 +136,7 @@ Controller cameraController;
 					//savePrintAndCallBack();
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_RTN_ORIG.toString())){
+					Thread.sleep(3000);
 					System.out.println("MastCam returned raw image");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.returnPhoto("original");
@@ -142,6 +148,7 @@ Controller cameraController;
 					//savePrintAndCallBack();
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_RTN_VID.toString())){
+					Thread.sleep(3000);
 					System.out.println("MastCam returned video");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.returnVideo();
@@ -153,6 +160,7 @@ Controller cameraController;
 					//savePrintAndCallBack();
 				}
 				else if(message.toLowerCase().contains((Commands.MCAM_SLCT_FLTR.toString().toLowerCase()))){
+					Thread.sleep(3000);
 					System.out.println("MastCam selected filter");
 					if(cameraController.currentMastCam.isOn()){
 						String[] messageArray = message.toLowerCase().split(" ");
@@ -170,7 +178,8 @@ Controller cameraController;
 					//savePrintAndCallBack();
 				}
 				else if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM_100.toString().toLowerCase()))){
-					System.out.println("MastCam selected camera");
+					Thread.sleep(3000);
+					System.out.println("MastCam selected camera 100");
 					if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM_100.toString().toLowerCase()))) cameraController.selectCamera100(true);
 				//	if(message.toLowerCase().contains("34")) cameraController.selectCamera100(false);
 					cameraController.currentMastCam.setOn(true);
@@ -178,7 +187,8 @@ Controller cameraController;
 					savePrintAndCallBack();
 				}
 				else if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM_34.toString().toLowerCase()))){
-					System.out.println("MastCam selected camera");
+					Thread.sleep(3000);
+					System.out.println("MastCam selected camera 34");
 					//if(message.toLowerCase().contains("100")) cameraController.selectCamera100(true);
 					if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM_34.toString().toLowerCase()))) cameraController.selectCamera100(false);
 					//cameraController.currentMastCam.setOn(true);
@@ -186,6 +196,7 @@ Controller cameraController;
 					savePrintAndCallBack();
 				}
 				else if(message.equalsIgnoreCase(Commands.MCAM_CLR.toString())){
+					Thread.sleep(4000);
 					System.out.println("MastCam cleared memory");
 					if(cameraController.currentMastCam.isOn()){
 						cameraController.currentMastCam.clearMemory();
