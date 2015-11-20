@@ -7,5 +7,5 @@ Compiling and Running the MastCam
 5. Under src in the mastCam_testMain package,you can run the TestMain.java to get the commands running.
 6. MastCam will start execution and two threads will be generated for the client and the server.
 7. Client will send various commands to the server from the commands.txt file  and the server will respond back with the      appropriate response.
-8. There are  differnt command files one is for selecting MastCam_34 Camera and the another is for selecting Mast_cam 100 Camera
-9. There are also  other dummy command files one of which is a mixture of original and dummy commands which on running executes the original command as it is whereas the dummy one's won't excute and will show an Invalid Command error.
+8. There are  different command files, one is for selecting MastCam_34 Camera and the another is for selecting Mast_cam 100 Camera
+9. There are also other dummy command files, one of which is a mixture of original and dummy commands which on running executes the original command as it is whereas the dummy one's won't excute and will show an Invalid Command error.
