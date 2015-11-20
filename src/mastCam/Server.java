@@ -169,11 +169,19 @@ Controller cameraController;
 					
 					//savePrintAndCallBack();
 				}
-				else if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM.toString().toLowerCase()))){
+				else if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM_100.toString().toLowerCase()))){
 					System.out.println("MastCam selected camera");
-					if(message.toLowerCase().contains("100")) cameraController.selectCamera100(true);
-					if(message.toLowerCase().contains("34")) cameraController.selectCamera100(false);
+					if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM_100.toString().toLowerCase()))) cameraController.selectCamera100(true);
+				//	if(message.toLowerCase().contains("34")) cameraController.selectCamera100(false);
 					cameraController.currentMastCam.setOn(true);
+					
+					savePrintAndCallBack();
+				}
+				else if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM_34.toString().toLowerCase()))){
+					System.out.println("MastCam selected camera");
+					//if(message.toLowerCase().contains("100")) cameraController.selectCamera100(true);
+					if(message.toLowerCase().contains((Commands.MCAM_SLCT_CAM_34.toString().toLowerCase()))) cameraController.selectCamera100(false);
+					//cameraController.currentMastCam.setOn(true);
 					
 					savePrintAndCallBack();
 				}
